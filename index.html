@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRETTA Beauty | Experiencia Premium 2026</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased">
+
+    <div id="preloader">
+        <div class="preloader-content text-center">
+            <img src="logo_pretta.png" alt="Logo PRETTA Beauty" class="preloader-logo mb-6">
+            <span class="text-xs uppercase tracking-[0.4em] text-[#D88697]">Cargando Experiencia</span>
+        </div>
+    </div>
+
+    <nav class="top-nav fixed top-0 left-0 w-full z-50 py-4 px-8 bg-white/80 backdrop-blur-md border-b border-[#EDC5CF]">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="#hero" class="flex items-center">
+                <img src="logo_pretta.png" alt="PRETTA Beauty" class="w-28 opacity-90">
+            </a>
+            <div class="flex items-center space-x-12">
+                <a href="#nosotros" class="nav-link text-xs uppercase tracking-widest text-gray-700 hover:text-[#D88697]">Nosotros</a>
+                <a href="#pilares" class="nav-link text-xs uppercase tracking-widest text-gray-700 hover:text-[#D88697]">Pilares</a>
+                <a href="#contacto" class="nav-link text-xs uppercase tracking-widest text-gray-700 hover:text-[#D88697]">Contacto</a>
+                <a href="CATÁLOGO PRETTA BEAUTY 2026.pdf" target="_blank" class="btn-outline px-6 py-3 uppercase tracking-widest text-xs inline-block bg-white hover:border-[#D88697] hover:text-[#D88697]"> 
+                    Catálogo 2026 (PDF)
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 border-b border-[#EDC5CF] overflow-hidden bg-[#FAF0F2] pt-24">
+        
+        <div id="threejs-canvas" class="absolute inset-0 z-0"></div>
+
+        <div class="max-w-4xl reveal z-10 relative pointer-events-none"> 
+            <img src="logo_pretta.png" alt="Logo" class="w-48 mx-auto mb-10 opacity-80 pointer-events-auto">
+            
+            <h1 class="text-5xl md:text-8xl mb-8 leading-tight text-gray-800">
+                Realza tu belleza define tu estilo, <br>
+                <span class="italic text-gray-600 font-light">perfecciona cada detalle, se inolvidable.</span>
+            </h1>
+            
+            <a href="CATÁLOGO PRETTA BEAUTY 2026.pdf" target="_blank" class="btn-outline px-12 py-5 uppercase tracking-widest text-xs inline-block pointer-events-auto mt-6 bg-white/50 backdrop-blur-sm"> 
+                Ver Catálogo Completo 2026
+            </a>
+        </div>
+    </header>
+
+    <section id="nosotros" class="py-32 overflow-hidden bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="order-2 md:order-1 reveal">
+                    <div class="relative group">
+                        <div class="aspect-[3/4] overflow-hidden border border-[#EDC5CF] transition-transform duration-700 group-hover:scale-[1.02]">
+                            <img src="DIOR.png" alt="Esencia de Belleza" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-8 -right-8 w-full h-full border border-[#EDC5CF] -z-10 transition-transform duration-700 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 reveal">
+                    <span class="text-xs uppercase tracking-widest mb-4 block text-[#D88697]">Nuestra Esencia</span>
+                    <h2 class="text-5xl mb-10 leading-snug serif-font">Más que maquillaje, una declaración de amor propio.</h2>
+                    <p class="text-lg leading-relaxed mb-8 font-light text-gray-700">
+                        En PRETTA Beauty, democratizamos el acceso a la belleza de alta gama. No somos solo una tienda, somos tus aliados en la búsqueda de tu mejor versión.
+                    </p>
+                    <p class="text-lg leading-relaxed font-light italic border-l-2 border-[#EDC5CF] pl-6 text-gray-600">
+                        Seleccionamos con rigor estético y calidad superior para poner tu belleza en alto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pilares" class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-4xl text-center mb-20 serif-font text-gray-800 reveal">Nuestros Pilares</h2>
+            <div class="grid md:grid-cols-3 gap-16 text-center">
+                <div class="bg-[#FAF0F2] p-10 border border-[#EDC5CF] reveal" style="transition-delay: 0.1s;">
+                    <span class="text-3xl block mb-6 text-[#D88697]">✧</span>
+                    <h4 class="serif-font text-2xl mb-6 text-gray-800">Nuestra Misión</h4>
+                    <p class="text-base text-gray-600 font-light leading-relaxed">Poner la belleza de alta gama al alcance de todos, garantizando calidad superior en cada detalle.</p>
+                </div>
+                <div class="bg-[#FAF0F2] p-10 border border-[#EDC5CF] reveal" style="transition-delay: 0.2s;">
+                    <span class="text-3xl block mb-6 text-[#D88697]">✧</span>
+                    <h4 class="serif-font text-2xl mb-6 text-gray-800">Nuestra Visión</h4>
+                    <p class="text-base text-gray-600 font-light leading-relaxed">Ser el aliado global de confianza para la expresión de la belleza auténtica.</p>
+                </div>
+                <div class="bg-[#FAF0F2] p-10 border border-[#EDC5CF] reveal" style="transition-delay: 0.3s;">
+                    <span class="text-3xl block mb-6 text-[#D88697]">✧</span>
+                    <h4 class="serif-font text-2xl mb-6 text-gray-800">Nuestro Objetivo</h4>
+                    <p class="text-base text-gray-600 font-light leading-relaxed">Asegurar la satisfacción total con una experiencia de compra cercana, rápida y estética.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-32 bg-[#FAF0F2] border-t border-[#EDC5CF]">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <span class="uppercase tracking-widest text-xs text-[#D88697] mb-4 block">Hablemos</span>
+            <h2 class="text-5xl mb-16 serif-font text-gray-800 reveal">¿Lista para elevar tu estilo?</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 text-left bg-white p-12 border border-[#EDC5CF] reveal">
+                <div class="group">
+                    <h4 class="uppercase text-[11px] tracking-widest mb-4 text-[#D88697] font-bold">WhatsApp Directo</h4>
+                    <p class="text-xl mb-2 text-gray-800">+52 729 453 5392</p>
+                    <p class="text-gray-500 italic font-light"> Para hacer pedido contactanos. Atención inmediata.</p>
+                    <a href="https://wa.me/TuNumeroAqui" class="btn-outline px-6 py-3 uppercase tracking-widest text-[10px] inline-block mt-4 bg-[#FAF0F2]"> 
+                        Chatear Ahora
+                    </a>
+                </div>
+                <div>
+                    <h4 class="uppercase text-[11px] tracking-widest mb-4 text-[#D88697] font-bold">Instagram</h4>
+                    <p class="text-xl mb-2 text-gray-800">@pretta.beauty</p>
+                    <p class="text-gray-500 italic font-light">Te respondemos en menos de 24 horas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-white text-center border-t border-[#EDC5CF]">
+        <img src="logo_pretta.png" alt="Logo" class="w-32 mx-auto mb-8 opacity-50">
+        <p class="text-[10px] uppercase tracking-[0.4em] mb-4 text-[#D88697]">PRETTA Beauty Concept</p>
+        <p class="text-[9px] opacity-40 font-sans tracking-widest uppercase text-gray-600">&copy; 2026. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
