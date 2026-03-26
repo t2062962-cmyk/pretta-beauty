@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             color: 0xF7C8F4, // Rosa Fuerte (Deep Pink / Fucsia)
             metalness: 0.6,  // Un toque ligero de metal para brillo
             roughness: 0.05, // Muy pulido
-            transmission: 0.6, // Traslúcido (pasa luz, se ve rosa intenso pero no tapa)
+            transmission: 0.8, // Traslúcido (pasa luz, se ve rosa intenso pero no tapa)
             thickness: 1.0,  // Grosor medio para refracción
             ior: 1.5,        // Índice de Refracción estándar
             specularColor: 0xffffff,
