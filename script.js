@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- MATERIAL ACTUALIZADO: ROSA FUERTE VIBRANTE (FUCSIA/CEREZO) ---
         const material = new THREE.MeshPhysicalMaterial({ 
             color: 0xF7C8F4, // Rosa Fuerte (Deep Pink / Fucsia)
-            metalness: 0.1,  // Un toque ligero de metal para brillo
+            metalness: 0.4,  // Un toque ligero de metal para brillo
             roughness: 0.05, // Muy pulido
             transmission: 0.6, // Traslúcido (pasa luz, se ve rosa intenso pero no tapa)
             thickness: 1.0,  // Grosor medio para refracción
