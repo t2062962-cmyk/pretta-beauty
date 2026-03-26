@@ -140,3 +140,38 @@ h1, h2, h3, h4, .serif-font {
 .category-card:hover .line-decorator {
     width: 40px;
 }
+/* --- EFECTO DE PARPADEO Y MOVIMIENTO PARA BOTONES DE CATÁLOGO --- */
+@keyframes attention-pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 0, 152, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 0 15px 5px rgba(225, 0, 152, 0.2); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 0, 152, 0); }
+}
+
+/* Aplicamos la animación solo a los botones que llevan al catálogo */
+a[href*="CATÁLOGO"] {
+    animation: attention-pulse 2s infinite ease-in-out;
+    border-radius: 4px; /* Figura inicial */
+    transition: all 0.5s ease;
+}
+
+/* Cambio de figura al pasar el mouse (se vuelve más redondeado/ovalado) */
+a[href*="CATÁLOGO"]:hover {
+    border-radius: 50px;
+    background-color: #E10098 !important; /* El rosa fuerte solo al interactuar */
+    color: white !important;
+}
+
+/* --- ESTILO PARA EL BOTÓN DE INSTAGRAM --- */
+.btn-instagram {
+    border: 1px solid #E1306C;
+    color: #E1306C;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-3px);
+}
