@@ -97,7 +97,7 @@ h1, h2, h3, h4, .serif-font {
 
 /* --- BOTÓN MINIMALISTA --- */
 .btn-outline {
-    border: 1px solid var(--pink-border);
+    border: 2px solid var(--black-soft);
     position: relative;
     z-index: 1;
     transition: all 0.4s ease;
