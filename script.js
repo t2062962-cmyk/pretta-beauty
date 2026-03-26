@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- MATERIAL ACTUALIZADO: ROSA FUERTE VIBRANTE (FUCSIA/CEREZO) ---
         const material = new THREE.MeshPhysicalMaterial({ 
             color: 0xF6A5C8,    // Rosa Chicle Exacto de la imagen
-            metalness: 0.65,     // Reducido: para que se vea más como piedra/cristal, menos metal
+            metalness: 0.60,     // Reducido: para que se vea más como piedra/cristal, menos metal
             roughness: 0.05,    // Muy pulido
             transmission: 0.6,  // Equilibrado: para que tenga el color sólido pero pase luz en bordes
             thickness: 1.5,     // Mayor grosor para mejor refracción de luz
