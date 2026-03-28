@@ -1,9 +1,13 @@
 :root {
-    --pink-pastel: #FAF0F2; /* Nuevo Rosa Cosmético Fondo (Medio/Suave) */
-    --pink-border: #EDC5CF; /* Nuevo Rosa Cosmético Bordes (Medio) */
-    --pink-accent: #D88697; /* Nuevo Rosa Cosmético Acento (Medio/Fuerte) */
-    --black-soft: #1a1a1a; /* Texto principal */
+    --pink-pastel: #FAF0F2; 
+    --pink-border: #EDC5CF; 
+    --pink-accent: #D88697; 
+    --black-soft: #1a1a1a; 
     --transition-smooth: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    /* Nuevas variables para el fondo premium */
+    --glass-white: rgba(255, 255, 255, 0.2);
+    --pink-gradient: linear-gradient(135deg, #ffffff 0%, #ffdee9 50%, #fecfef 100%);
 }
 
 html {
@@ -15,19 +19,57 @@ body {
     font-family: 'Lora', serif;
     color: var(--black-soft);
     overflow-x: hidden;
-    /* Ajuste para la nav fixed */
     padding-top: 80px; 
 }
 
-/* --- ESTILO PARA EL CANVAS DE PENTÁGONOS --- */
-#pentagon-canvas {
+/* --- NUEVO FONDO CRISTALINO Y BRILLOS (Sustituye al Canvas) --- */
+.hero-cristalino {
+    background: var(--pink-gradient);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Capa de Brillos (Sparkles) */
+.hero-cristalino::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Permite que el mouse "atraviese" el canvas para detectar movimientos en el hero */
-    z-index: 0;
+    background-image: 
+        radial-gradient(circle, #ffffff 1.5px, transparent 1.5px),
+        radial-gradient(circle, #ffffff 1px, transparent 1px);
+    background-size: 70px 70px, 110px 110px;
+    background-position: 0 0, 35px 35px;
+    opacity: 0.5;
+    animation: sparklesFloating 15s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Capa de Efecto Cristal (Blur) */
+.hero-cristalino::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--glass-white);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Asegurar que el contenido brille sobre el fondo */
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes sparklesFloating {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
+    100% { transform: translateY(0) scale(1); }
 }
 
 /* --- 0. PRELOADER ROSA COSMÉTICO --- */
@@ -89,14 +131,14 @@ body {
     width: 100%;
 }
 
-/* --- TRANSICIONES DE SECCIONES (SÚPER SUAVES) --- */
-section {
+/* --- TRANSICIONES DE SECCIONES --- */
+section, .reveal {
     opacity: 0;
     transform: translateY(30px);
     transition: var(--transition-smooth);
 }
 
-section.section-visible {
+.section-visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -123,53 +165,22 @@ h1, h2, h3, h4, .serif-font {
     transform: translateY(-2px);
 }
 
-/* --- TARJETAS DE CATEGORÍA ROSAS --- */
-.bg-pink-pretta { background-color: var(--pink-pastel); }
-
-.category-card {
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid var(--pink-border);
-}
-
-.category-card:hover {
-    background-color: var(--pink-pastel);
-    border-color: var(--pink-accent);
-    transform: translateY(-5px);
-}
-
-.category-card:hover h3 {
-    color: var(--pink-accent);
-}
-
-.category-card .line-decorator {
-    width: 0;
-    height: 1px;
-    background-color: var(--pink-accent);
-    transition: width 0.4s ease;
-}
-
-.category-card:hover .line-decorator {
-    width: 40px;
-}
-
-/* --- EFECTO DE PARPADEO Y MOVIMIENTO PARA BOTONES DE CATÁLOGO --- */
+/* --- BOTONES DE CATÁLOGO --- */
 @keyframes attention-pulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 0, 152, 0.4); }
-    50% { transform: scale(1.05); box-shadow: 0 0 15px 5px rgba(225, 0, 152, 0.2); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 0, 152, 0); }
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(216, 134, 151, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 0 15px 5px rgba(216, 134, 151, 0.2); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(216, 134, 151, 0); }
 }
 
-/* Aplicamos la animación solo a los botones que llevan al catálogo */
 a[href*="CATÁLOGO"] {
     animation: attention-pulse 2s infinite ease-in-out;
-    border-radius: 4px; /* Figura inicial */
+    border-radius: 4px;
     transition: all 0.5s ease;
 }
 
-/* Cambio de figura al pasar el mouse (se vuelve más redondeado/ovalado) */
 a[href*="CATÁLOGO"]:hover {
     border-radius: 50px;
-    background-color: #E10098 !important; /* El rosa fuerte solo al interactuar */
+    background-color: var(--pink-accent) !important;
     color: white !important;
 }
 
